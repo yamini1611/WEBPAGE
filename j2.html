@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function validate() {
+
+    var uname = document.myform.name.value;
+    var newaddress = document.myform.address.value;
+    var newemail = document.myform.email.value;
+    var newage= document.myform.age.value;
+    var uaddress = document.myform.address.value;
+    if (uname == '' || uname == null) {
+        alert('Please enter your name');
+        return false;
+    }
+    else if (!letters.test(uname)) {
+        alert('Name field required only alphabet characters');
+        return false;
+    }
+    else if (newemail == '') {
+        alert('Please enter your user email id');
+        return false;
+    }
+    else if (address == '') {
+        alert('Please enter your address');
+        return false;
+    }
+    else if (newage == '') {
+        alert('Please enter your age');
+        return false;
+    }
+    else if (newage > 18) {
+        document.write("eligible to vote :)");
+    }
+    else {
+        document.write("wait till you turn 18!")
+    }
+}
+</script>
+<body>
+    <div style=" padding-left: 400px;" >
+        <h1 style="text-align: center; padding-right: 480px;">Canditate Details</h1>
+        <form name="myform"style="background-color: rgb(214, 235, 243); padding-left: 20px; border: solid;padding-bottom: 20px; width:550px; padding-top: 20px;" onsubmit=" return validate()" >
+            <label><b>Name</b></label><br>
+            <input type="text" name="name" placeholder="enter name"id="t1" required><br><br>
+            <label><b>Email-id</b></label><br>
+            <input type="email" name="email-id" placeholder="enter email-id" id="t2" required><br><br>
+            <label><b>Age</b></label><br>
+            <input type="number" name="Age" placeholder="enter Age"  id="t3" required><br><br>
+            <label><b>DOB</b></label><br>
+            <input type="date" name="date" placeholder="enter date" required><br><br>
+
+            <label><b>Gender</b></label><br>
+            <input type="radio" id="gender" name="gender" value="female">female <br>
+            <input type="radio" id="gender" name="gender" value="male">male <br><br>
+            <label><b>Address</b></label><br>
+            <textarea></textarea><br><br>
+            <label><b>Select Profession</b></label>
+            <select name="field">
+                <optgroup label="front end developer">
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JAVASCRIPT</option>
+                </optgroup>
+                <optgroup label="back end developer">
+                    <option>DATABASE</option>
+                    <option>DJANGO</option>
+                    <option>DOT NET </option>
+                </optgroup>
+
+            </select>
+            <input type="submit" value="REGISTER"><br><br>
+
+            
+
+            <label><b>Mobile Number</b></label>
+           
+            <input type="tel" pattern="[0-9]{10}" required>
+            <br>
+            <br>
+            
+            <input type="submit" value="Submit" >
+        </form>
+    </div>
+
+</body>
+
+</html>
