@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form2</title>
-</head>
-<body>
-    
+<html>
 
 <script>  
 function validateform()
@@ -30,14 +21,15 @@ else if(passwd.length<6)
   }
  else
   document.write( "Valid User name and Password" );
+  window.location="j2.html";
 }  
 </script>  
 
 <body>  
     <form name="myform" method="post" action="" onsubmit="return validateform()" >  
-    Name: <input type="text" name="pname"><br><br> 
-    Password: <input type="password" name="pword"><br>  
-    <input type="submit" value="Sign In"><br>  <br>
+    Name: <input type="text" name="pname"><br> <br> 
+    Password: <input type="password" name="pword"><br> <br> 
+    <input type="submit" value="Sign In">  
     </form>  
 </body>
 
